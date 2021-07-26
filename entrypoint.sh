@@ -59,6 +59,7 @@ case $target in
     pkgbuild)
         namcap PKGBUILD
         install_deps
+        gpg --keyserver=keyserver.ubuntu.com. --receive-key 647F28654894E3BD457199BE38DBBDC86092693E
         makepkg --syncdeps --noconfirm
         namcap "${pkgname}"-*
 
